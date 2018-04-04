@@ -1,18 +1,7 @@
 #include <iostream>
-#include <algorithm>    // std::copy
 #include <vector>
 #include <cstdlib>
 #include <ctime>
-/* скорость возраст здоровье атака защита
-  * 3 типа юнитов: крестьянин, воин, лучник
-  * массив этих юнитов
-  * юниты могут объединяться в отряды
-  * отряды должны легко управляться: быстро получить состояние отрядов/юнитов
-  *
-  * вывод: кол-во отрядов и их хар-ки
-
-* доп: вывести размеры для каждого типа классов
-*/
 
 class Unit {
     public:
@@ -175,7 +164,6 @@ public:
 int main()
 {
     srand(time(0));
-
     std::vector<Unit *> Fanta;
     for (int i = 0; i < 5; i++) {
         Fanta.push_back(new Archer(rand() % 50, rand() % 15, rand() % 50, rand() % 50, rand() % 50));
